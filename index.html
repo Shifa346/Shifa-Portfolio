@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shifa Ansari | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-blue: #0a1f44;
+      --blue-light: #123a6f;
+      --text-light: #e0e6f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background: var(--dark-blue);
+      color: var(--text-light);
+    }
+
+    .sidebar {
+      width: 300px;
+      background: var(--dark-blue);
+      color: var(--text-light);
+      padding: 40px 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--text-light);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .sidebar h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .sidebar p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--blue-light);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      transition: background 0.3s;
+    }
+
+    .resume-button:hover {
+      background: #1d4c90;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-light);
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .main {
+      margin-left: 300px;
+      padding: 40px 30px;
+      flex: 1;
+      background-color: var(--dark-blue);
+    }
+
+    section {
+      margin-bottom: 60px;
+      background: var(--dark-blue);
+      padding: 24px;
+      border-radius: 10px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--blue-light);
+      margin-top: 6px;
+    }
+
+    section p, li {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      border: 1px solid #123a6f;
+      border-radius: 8px;
+      background: #0e2a5c;
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
+      border-bottom: 2px solid #123a6f;
+    }
+
+    .project-card .content {
+      padding: 16px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #b4c4db;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="photo.jpg" alt="Shifa Ansari" />
+    <h1>Shifa Ansari</h1>
+    <p>IT Student</p>
+    <a href="Resume.pdf.pdf" target="_blank" class="resume-button">View My Resume</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m an enthusiastic and self-motivated IT diploma student, currently in my 5th semester at Amrutvahini Polytechnic, Sangamner.
+        I love translating real-world needs into technical solutions. I’ve developed a camera-based Object Detection GUI using Python,
+        and I’m passionate about continuous learning, teamwork, and building practical software.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>C:</strong> Logic, loops, memory management</li>
+        <li><strong>C++:</strong> OOP, classes, inheritance</li>
+        <li><strong>Python:</strong> GUI apps, OpenCV, automation</li>
+        <li><strong>HTML/CSS:</strong> Web page designing</li>
+        <li><strong>PyQt5:</strong> GUI for object detection</li>
+        <li><strong>OpenCV:</strong> Real-time object detection</li>
+        <li><strong>VS Code:</strong> Daily code editor</li>
+        <li><strong>Report Writing:</strong> Technical documentation</li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2>Work Experience</h2>
+      <p><strong>PHN Technology Pvt. Ltd.</strong><br>
+      Trainee — June 1 to July 25, 2025<br>
+      Worked on Python development and project-based training. Gained experience in debugging, collaboration, and real-world app deployment.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="application 1.png" alt="Object Detection App Screenshot" />
+          <div class="content">
+            <h3>Object Detection App</h3>
+            <p>Python + PyQt5 + OpenCV: Detects objects and calculates area in real-time using a webcam.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="application 2.png" alt="Alternate View Screenshot" />
+          <div class="content">
+            <h3>Alternate View</h3>
+            <p>Modified interface showcasing detection in another layout environment.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="content">
+            <h3>Hospital Navigation using ArUco</h3>
+            <p>Indoor navigation system using OpenCV and ArUco markers to assist patients in finding departments inside a hospital.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="content">
+            <h3>AR Business Card</h3>
+            <p>Augmented Reality-based business card that overlays a floating 3D model and reads card details aloud using MediaPipe and OpenCV.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="content">
+            <h3>AR Video Overlay</h3>
+            <p>AR system that overlays a video on an ArUco marker with play/pause buttons and real-time subtitle display next to the video.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>SSC (10th Grade)</strong><br>
+      Amrutvahini Model School — Passed in 2023</p>
+      <p><strong>Diploma in Information Technology</strong><br>
+      Amrutvahini Polytechnic, Sangamner (2022 – Present)<br>
+      Completed 2nd year in 2025, now pursuing 3rd year.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:shifaansari2572@gmail.com" style="color:#c0d4ff;">shifaansari2572@gmail.com</a><br><br>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/shifa-ansari-aa4109357" 
+           target="_blank" rel="noopener noreferrer" style="color:#c0d4ff;">
+           linkedin.com/in/shifa-ansari-aa4109357
+        </a>
+      </p>
+    </section>
+
+    <footer>© 2025 Shifa Ansari</footer>
+  </div>
+
+</body>
+</html>
